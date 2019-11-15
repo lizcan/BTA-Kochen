@@ -17,14 +17,31 @@ nav a {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
-nav {
+header nav {
   display: none;
 }
 
 .show {
   display: block;
+  position: absolute;
+  top: 66px;
+  background: white;
+  width: 100%;
+  height: calc(100vh - 64px);
+  left: 0;
+  text-align: center;
+  line-height: 3rem;
+  }
+
+.show ul{
+  padding:0;
+}
+
+.overflow{
+  overflow: hidden;
 }
 
 header {
@@ -126,7 +143,7 @@ button {
   border-bottom-left-radius: 0;
 }
 
-.abonnieren h2{
+.abonnieren h2 {
   font-size: 16px;
   padding: 1rem;
 }
@@ -137,7 +154,7 @@ button {
   text-align: center;
 }
 
-.eingabe{
+.eingabe {
   padding: 1rem;
   border-radius: 5px;
   border-top-right-radius: 0;
@@ -146,13 +163,35 @@ button {
   border: 0px solid transparent;
 }
 
+#footer {
+  text-align: center;
+  padding: 2rem 5%;
+  line-height: 1.8;
+}
+
+#legalcrap ul {
+  font-size: 12px;
+  padding: 0;
+}
+
+/* justify-content greift nur bei displa: flex!! */
+#social ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+#social li {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
 
 @media (min-width: 1024px) {
-  nav {
+  header nav {
     display: block;
   }
 
-  button {
+  header button {
     display: none;
   }
 
@@ -171,5 +210,11 @@ button {
 
   .row {
     display: flex;
+  }
+
+  #footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 5%;
   }
 }
